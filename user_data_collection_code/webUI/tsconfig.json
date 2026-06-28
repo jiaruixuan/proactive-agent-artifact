@@ -1,0 +1,31 @@
+{
+	"compilerOptions": {
+		"target": "es2020",
+		"useDefineForClassFields": true,
+		"lib": ["ES2020", "DOM"],
+		"allowJs": false,
+		"skipLibCheck": true,
+		"esModuleInterop": false,
+		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+
+		/* Strict Type-Checking Options */
+		"strict": true /* Enable all strict type-checking options. */,
+		"forceConsistentCasingInFileNames": true,
+		"module": "es2020",
+		"moduleResolution": "Node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "react-jsx",
+		"baseUrl": "./",
+		"paths": {
+			"@": ["src"],
+			"@/*": ["src/*"]
+		},
+		"types": []
+	},
+	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "vite.config.ts", "src/**/*.scss", "public/flexible.js"],
+	"exclude": ["node_modules", "dist", "**/*.js"]
+}

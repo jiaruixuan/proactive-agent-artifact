@@ -1,0 +1,10 @@
+[
+  {
+    "time": "01-01 10:00:00.000",
+    "event": "[open_file]\n<path>workspace/sample-app/src/server.py</path>\n<context_after_operation>\n<visible_content>\ndef handle_request(request):\n    return {\"status\": \"ok\"}\n</visible_content>\n</context_after_operation>"
+  },
+  {
+    "time": "01-01 10:01:12.000",
+    "event": "[edit_text]\n<path>workspace/sample-app/src/server.py</path>\n<context_after_operation>\n<context_content>\ndef handle_request(request):\n    <FT_delete>return {\"status\": \"ok\"}</FT_delete><FT_insert>return {\"status\": \"ok\", \"request_id\": request.id}</FT_insert>\n</context_content>\n</context_after_operation>"
+  }
+]

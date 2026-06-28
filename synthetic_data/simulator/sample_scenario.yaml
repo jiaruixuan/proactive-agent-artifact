@@ -1,0 +1,21 @@
+eventSink:
+  out_file: synthetic_data/scenarios/agent_data/scene_0.jsonl
+environment:
+  theme: API Service Maintenance
+  description: A developer is maintaining a local API service in a sample workspace.
+  entities:
+  - workspace/sample-app/src/server.py
+  - workspace/sample-app/tests/test_server.py
+  agent_ops:
+  - terminal_run(command)
+  - file.open(file_path, mode)
+  - file.save(file_path, content)
+  events_example:
+  - The user opens `src/server.py`.
+  - The user edits the request handler.
+  - The user runs the focused unit test.
+user:
+  theme: API Service Maintenance
+  description: A developer working in a local sample project.
+  goal: Add request identifiers to API responses and update tests.
+agent: {}

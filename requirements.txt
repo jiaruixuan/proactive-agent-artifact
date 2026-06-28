@@ -1,0 +1,26 @@
+# === Core ===
+torch
+transformers
+datasets
+accelerate
+peft
+trl
+
+# === Eval & Data Pipeline ===
+requests
+openai
+litellm
+fire
+tqdm
+pyyaml
+python-dotenv
+tiktoken
+tenacity
+jsonlines
+colorlog
+pydantic
+numpy
+toml
+
+# === Synthetic simulator ===
+codelinker

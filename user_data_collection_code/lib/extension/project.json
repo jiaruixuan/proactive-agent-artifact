@@ -1,0 +1,29 @@
+{
+	"root": "lib/extension",
+	"targets": {
+		"compile": {
+			"dependsOn": ["^build"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "lib/extension",
+				"command": "tsc"
+			}
+		},
+		"build": {
+			"dependsOn": ["compile"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "lib/extension",
+				"command": "npx esbuild build/extension.js --external:vscode --bundle --platform=node --target=es2020  --minify --outfile=dist/extension.js && npx --yes javascript-obfuscator dist/extension.js --output dist/extension.js --compact true --control-flow-flattening true --control-flow-flattening-threshold 0.5 --split-strings true --split-strings-chunk-length 5"
+			}
+		},
+		"test": {
+			"dependsOn": ["compile"],
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "lib/extension",
+				"command": "npx esbuild build/extension.js --external:vscode --bundle --platform=node --target=es2020  --minify --outfile=dist/extension.js"
+			}
+		}
+	}
+}

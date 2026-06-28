@@ -1,0 +1,18 @@
+codingassistant:
+  tasks:
+  - Add request identifiers to responses in a Python API service.
+  - Update a JavaScript form component to validate required fields.
+  - Write a regression test for a cache invalidation bug.
+  sample_events:
+  - The user opens `workspace/sample-app/src/server.py` in the editor.
+  - The user searches the workspace for `request_id`.
+  - The user edits `tests/test_server.py` to assert a response field.
+  - The user runs `pytest tests/test_server.py` in the terminal.
+writingassistant:
+  tasks:
+  - Compare three project management tools and write a short recommendation.
+  - Summarize notes from a design review into an action list.
+  sample_events:
+  - The user opens `workspace/report/notes.md`.
+  - The user searches for pricing information in a browser.
+  - The user edits a comparison table in `workspace/report/draft.md`.

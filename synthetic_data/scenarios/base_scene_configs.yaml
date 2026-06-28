@@ -1,0 +1,27 @@
+- environment:
+    theme: API Service Maintenance
+    description: A developer is updating a small Python API service in a local workspace.
+      The project contains route handlers, tests, and configuration files.
+    entities:
+    - workspace/sample-app/src/server.py
+    - workspace/sample-app/tests/test_server.py
+    - workspace/sample-app/pyproject.toml
+    agent_ops:
+    - file_read(file_path)
+    - file_patch(file_path, old_snippet, new_snippet)
+    - terminal_run(command, working_directory)
+    events_example:
+    - The user opens `src/server.py` and reviews the request handler.
+    - The user edits the response payload to include a request identifier.
+    - The user runs the unit test for the updated handler.
+    - The agent reads `tests/test_server.py` to check expected response fields.
+    operations_example:
+    - '[open_file] workspace/sample-app/src/server.py line 1-20'
+    - '[edit_text] workspace/sample-app/src/server.py line 4: add request_id to the
+      response body'
+    - '[search] query="request_id" scope=workspace, found tests/test_server.py:12'
+  user:
+    theme: API Service Maintenance
+    description: A developer maintaining a local API service.
+    goal: Add request identifiers to API responses and update tests.
+  agent: {}
